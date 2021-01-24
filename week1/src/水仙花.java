@@ -15,10 +15,10 @@ public class 水仙花{
             num=num/10;
             cnt++;
         }
-
         if(Arrays.stream(nums).sum()==nw_num)
             System.out.println("是水仙花数");
         else
             System.out.println("不是水仙花数");
     }
+
 }

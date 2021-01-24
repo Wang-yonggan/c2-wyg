@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class 字符串反转 {
     public static void main(String[] args) {
         Scanner in =new Scanner(System.in);
@@ -9,6 +8,5 @@ public class 字符串反转 {
             new_str=new_str+old_str.charAt(i);
         }
         System.out.println(new_str);
-
     }
 }
