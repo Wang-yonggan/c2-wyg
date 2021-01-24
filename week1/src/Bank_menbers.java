@@ -1,7 +1,7 @@
-public class 银行menbers {
+public class Bank_menbers {
     private String name="Null";
     private double rest;
-    public 银行menbers(String name, double rest){
+    public Bank_menbers(String name, double rest){
         this.name=name;
         this.rest=rest;
     }
@@ -9,7 +9,7 @@ public class 银行menbers {
         return rest;
     }
     public static void main(String[] args) {
-        银行menbers me =new 银行menbers("wyg",100);
+        Bank_menbers me =new Bank_menbers("wyg",100);
         System.out.println(me.get_rest());
     }
 }
