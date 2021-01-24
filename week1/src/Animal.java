@@ -1,8 +1,8 @@
 public class Animal {
     public double height;
     public double weight;
-    private String kind;//自己的种类（肉或其它）,
-    private String food;//食物种类
+    final String kind;//自己的种类（肉或其它）,
+    final String food;//食物种类
     public String name;
     public boolean live_flag=true;
     public boolean sleep_flag=false;
@@ -37,7 +37,7 @@ public class Animal {
             System.out.printf("%s现在处于清醒状态\n",name);
     }
     public void eat(Animal tar){
-        if(food==tar.kind){
+        if(food.equals(tar.kind)){
             weight+=tar.weight;
             System.out.printf("食入成功,%s现在体重为：%.2fkg\n",name,weight);
         }
@@ -45,7 +45,7 @@ public class Animal {
             System.out.println("事物种类不匹配,无法食入");
     }
     public void eat(String s,double w){
-        if(food==s){
+        if(food.equals(s)){
             weight+=w;
             System.out.printf("食入成功,%s现在体重为：%.2fkg\n",name,weight);
         }
