@@ -1,6 +1,6 @@
 public class Bank_menbers {
-    private String name="Null";
-    private double rest;
+    public String name="Null";
+    public double rest;
     public Bank_menbers(String name, double rest){
         this.name=name;
         this.rest=rest;

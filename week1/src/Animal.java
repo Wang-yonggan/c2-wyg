@@ -1,11 +1,11 @@
 public class Animal {
-    public double height;
-    public double weight;
-    final String kind;//自己的种类（肉或其它）,
+    private double height;
+    private double weight;
+    final String kind;//自己的种类（肉或其它）
     final String food;//食物种类
-    public String name;
+    private String name;
     public boolean live_flag=true;
-    public boolean sleep_flag=false;
+    private boolean sleep_flag=false;
     public Animal(double height,double weight,String kind,String food,String name){
         this.height=height;
         this.weight=weight;

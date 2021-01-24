@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Circle {
-    private double radius;
+    public double radius;
     private double pi=3.14;
     public void getArea(){
         System.out.printf("the area is %.2f\n",pi*radius*radius);
