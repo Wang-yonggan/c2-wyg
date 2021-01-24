@@ -1,7 +1,7 @@
 public class Animal {
     public double height;
     public double weight;
-    private String kind;//自己的种类（肉或草）
+    private String kind;//自己的种类（肉或其它）,
     private String food;//食物种类
     public String name;
     public boolean live_flag=true;

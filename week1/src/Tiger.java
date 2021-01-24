@@ -1,4 +1,3 @@
-
 public class Tiger extends Animal{
     String anima="tiger";
     public Tiger(double height, double weight, String kind, String food, String name) {
