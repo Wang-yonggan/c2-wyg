@@ -1,5 +1,4 @@
-public class main {
-
+public class Animal_world {
     public static void main(String[] args) {
         Tiger t=new Tiger(1,100,"meet","meat","tiger1");
         Rabbit r=new Rabbit(0.2,5,"meat","grass","rabbit1");
