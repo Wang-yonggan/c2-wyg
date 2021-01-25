@@ -1,3 +1,4 @@
+
 public class Animal {
     private double height;
     private double weight;
@@ -54,7 +55,6 @@ public class Animal {
         } else
             System.out.println("事物种类不匹配,无法食入");
     }
-
     public void eat(String s, double w) {
         if (food.equals(s)) {
             weight += w;
