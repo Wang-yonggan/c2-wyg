@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class FindPrefix {
     /*
-    ArrayList<String>
+    按0表示输入结束--->Line 29
      */
     public static String findPre(ArrayList<String> strings) {
         String prefix = "";

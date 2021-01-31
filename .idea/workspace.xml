@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d1971b1-5c1e-4aa0-bd45-2cfa566a44a9" name="默认的" comment="Merge remote-tracking branch 'origin/master' into master" />
+    <list default="true" id="1d1971b1-5c1e-4aa0-bd45-2cfa566a44a9" name="默认的" comment="Merge remote-tracking branch 'origin/master' into master">
+      <change afterPath="$PROJECT_DIR$/out/production/week2/Game.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/week2/HumanMonkey$Human.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/week2/HumanMonkey$Monkey.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/week2/HumanMonkey.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/src/AbstractClass/A.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/src/AbstractClass/B.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/src/AbstractClass/C.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/src/AbstractClass/TestAbstractClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/src/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/src/HumanMonkey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/src/InterfaceClass/Star.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/src/InterfaceClass/Universe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/src/poultry/Duck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/src/poultry/Poultry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/src/poultry/TestPoultry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/src/vehicles/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/src/vehicles/TestVehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/src/vehicles/Truck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/src/vehicles/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +69,7 @@
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/week1/src" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/week1.2/src" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
@@ -70,20 +91,6 @@
     </key>
   </component>
   <component name="RunManager" selected="应用程序.FindPrefix">
-    <configuration name="ArrayRevolve" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ArrayRevolve" />
-      <module name="week2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FindNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FindNumber" />
-      <module name="week2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FindPrefix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FindPrefix" />
       <module name="week2" />
@@ -91,16 +98,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Scratch" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+    <configuration name="HumanMonkey" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HumanMonkey" />
+      <module name="week2" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="scratch_3" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="scratch_3" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.java" />
+    <configuration name="TestAbstractClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AbstractClass.TestAbstractClass" />
+      <module name="week2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AbstractClass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPoultry" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="poultry.TestPoultry" />
+      <module name="week2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="poultry.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestVehicle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vehicles.TestVehicle" />
+      <module name="week2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vehicles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -108,10 +147,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.FindPrefix" />
-        <item itemvalue="应用程序.FindNumber" />
-        <item itemvalue="Java 草稿.Scratch" />
-        <item itemvalue="应用程序.ArrayRevolve" />
-        <item itemvalue="Java 草稿.scratch_3" />
+        <item itemvalue="应用程序.TestAbstractClass" />
+        <item itemvalue="应用程序.TestPoultry" />
+        <item itemvalue="应用程序.TestVehicle" />
+        <item itemvalue="应用程序.HumanMonkey" />
       </list>
     </recent_temporary>
   </component>
@@ -313,7 +352,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612107939872</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/modules.xml">
+      <created>1612108458615</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1612108458615</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Merge remote-tracking branch 'origin/master' into master">
+      <created>1612143419219</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1612143419219</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -331,6 +384,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="push you comment here please!" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;Initial commit" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/modules.xml" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into master" />
     <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master' into master" />
   </component>
