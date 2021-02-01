@@ -8,10 +8,6 @@ public abstract class AbstractUsb implements UsbImpl {
         this.is_begin = is_begin;
     }
 
-    public String getName() {
-        return NAME;
-    }
-
     public void printState() {
         if (is_begin)
             System.out.printf("%s已启动\n", NAME);
