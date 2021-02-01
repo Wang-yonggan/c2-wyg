@@ -14,7 +14,7 @@ public class C extends B {
     @Override
     public void showA() {
         //子承父：①通过super.fun(this.a)    ②通过提高a的修饰符可见等级,直接调用this.a,但造成耦合性更高
-        System.out.println("A类中numa" + getNuma());
+        System.out.println("A类中numa:" + getNuma());
     }
 
     @Override
@@ -23,6 +23,6 @@ public class C extends B {
     }
 
     public void showC() {
-        System.out.println("C类中numc" + numc);
+        System.out.println("C类中numc:" + numc);
     }
 }

@@ -1,5 +1,5 @@
 public class Tiger extends Animal {
-    String anima = "tiger";
+    private static final String anima = "tiger";
 
     public Tiger(double height, double weight, String kind, String food, String name) {
         super(height, weight, kind, food, name);
