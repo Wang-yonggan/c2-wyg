@@ -1,4 +1,4 @@
-package AbstractClass;
+package abc;
 
 public abstract class A {
     private int numa = 10;

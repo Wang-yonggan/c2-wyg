@@ -23,9 +23,11 @@ public class HumanMonkey {
         public Human(String s) {
             super(s);
         }
-        public void think(){
+
+        public void think() {
             System.out.println("别说话！认真思考！");
         }
+
         @Override
         public void speak() {
             System.out.println("我叫" + this.getName());

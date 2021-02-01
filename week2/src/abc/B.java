@@ -1,4 +1,4 @@
-package AbstractClass;
+package abc;
 
 public abstract class B extends A {
     private int numb = 20;
