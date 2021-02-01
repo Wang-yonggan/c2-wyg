@@ -5,10 +5,11 @@ public class TestUsb {
         Mouse mouse=new Mouse();
         KeyBoard keyBoard=new KeyBoard();
         Microphone microphone=new Microphone();
-        mouse.begin();
-        mouse.end();
-        keyBoard.begin();
-        microphone.begin();
-        microphone.end();
+        Computer computer=new Computer();
+        computer.add(microphone);
+        computer.add(mouse);
+        computer.add(keyBoard);
+        computer.begin();
+        computer.end();
     }
 }

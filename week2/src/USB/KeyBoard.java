@@ -1,9 +1,9 @@
 package USB;
 
 public class KeyBoard extends AbstractUsb{
-    private static final String name="键盘";
+    private static final String NAME ="键盘";
     public KeyBoard() {
-        setName(name);
+        setName(NAME);
     }
 
     @Override

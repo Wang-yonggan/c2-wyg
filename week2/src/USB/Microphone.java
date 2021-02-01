@@ -1,10 +1,10 @@
 package USB;
 
 public class Microphone extends AbstractUsb{
-    private static final String name="麦克风";
+    private static final String NAME ="麦克风";
 
     public Microphone() {
-        setName(name);
+        setName(NAME);
     }
 
     @Override

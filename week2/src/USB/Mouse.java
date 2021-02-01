@@ -1,9 +1,9 @@
 package USB;
 
 public class Mouse extends AbstractUsb{
-    private static final String name="鼠标";
+    private static final String NAME ="鼠标";
     public Mouse(){
-        setName(name);//初始化传入名字
+        setName(NAME);//初始化传入名字
     }
     @Override
     public void begin() {
