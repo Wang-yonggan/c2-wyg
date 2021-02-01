@@ -10,9 +10,9 @@ public abstract class AbstractUsb implements UsbImpl {
 
     public void printState() {
         if (is_begin)
-            System.out.printf("%s已启动\n", NAME);
+            System.out.println(NAME+"已启动");
         else
-            System.out.printf("%s已关闭\n", NAME);
+            System.out.println(NAME+"已关闭");
     }
 
     public void setName(String name) {
