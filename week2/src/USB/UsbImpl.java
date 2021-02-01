@@ -1,6 +1,7 @@
 package USB;
 
 public interface UsbImpl {
-    public void begin();
-    public void end();
+    void begin();
+
+    void end();
 }
