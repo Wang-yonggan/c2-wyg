@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Computer {
     private final ArrayList<UsbImpl> UsbArr = new ArrayList<>();
+
     //final表示UsbArr所含的usb不会被修改，但是UsbArr本身可增删整个的usb
     private static void print___() {
         System.out.println("-------------");

@@ -4,7 +4,7 @@ public class Microphone extends AbstractUsb {
     private static final String NAME = "麦克风";
 
     public Microphone() {
-        setName(NAME);
+        super(NAME);
     }
 
     @Override

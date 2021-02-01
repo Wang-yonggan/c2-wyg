@@ -11,8 +11,8 @@ public class FindPrefix {
         for (int i = 0; i < first.length(); i++) {
             String prefix_now = prefix;
             prefix += first.charAt(i);
-            for(String str:strings){
-                if(!str.startsWith(prefix)){
+            for (String str : strings) {
+                if (!str.startsWith(prefix)) {
                     prefix = prefix_now;
                     break;
                 }
