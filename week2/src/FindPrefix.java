@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class FindPrefix {
     /*
-    按0表示输入结束--->Line 29
+    按0表示输入结束--->Line 28
      */
     public static String findPre(ArrayList<String> strings) {
         String prefix = "";
@@ -24,9 +24,8 @@ public class FindPrefix {
     public static void main(String[] args) {
         ArrayList<String> strings = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
-        boolean is_input = true;
         String added = sc.nextLine();
-        while (is_input && !added.equals("0")) {
+        while (!added.equals("0")) {
             strings.add(added);
             added = sc.nextLine();
         }
