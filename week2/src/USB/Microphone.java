@@ -1,21 +1,16 @@
 package USB;
 
-public class Microphone extends AbstractUsb {
+public class Microphone implements UsbImpl {
     private static final String NAME = "麦克风";
+    private boolean is_begin = false;
 
-    public Microphone() {
-        super(NAME);
-    }
-
-    @Override
     public void begin() {
-        setIsBegin(true);
-        printState();
+        is_begin = true;
+        System.out.println(NAME + "已启动");
     }
 
-    @Override
     public void end() {
-        setIsBegin(false);
-        printState();
+        is_begin = false;
+        System.out.println(NAME + "已关闭");
     }
 }

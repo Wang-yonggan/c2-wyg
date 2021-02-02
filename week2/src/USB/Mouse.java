@@ -1,22 +1,17 @@
 package USB;
 
-public class Mouse extends AbstractUsb {
+public class Mouse implements UsbImpl {
     private static final String NAME = "鼠标";
+    private boolean is_begin = false;
 
-    public Mouse() {
-        super(NAME);
-    }
-
-    @Override
     public void begin() {
-        setIsBegin(true);
-        printState();
+        is_begin = true;
+        System.out.println(NAME + "已启动");
     }
 
-    @Override
     public void end() {
-        setIsBegin(false);
-        printState();
+        is_begin = false;
+        System.out.println(NAME + "已关闭");
     }
 
 }
