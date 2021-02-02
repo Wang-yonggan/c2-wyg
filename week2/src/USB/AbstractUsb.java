@@ -1,5 +1,4 @@
 //package USB;
-//
 //public abstract class AbstractUsb implements UsbImpl {
 //    private boolean is_begin = false;
 //    private final String NAME;//部件名字，如鼠标
