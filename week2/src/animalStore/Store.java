@@ -4,8 +4,9 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 public class Store {
-    private HashMap<String, LinkedList<AnimalImpl>> animalHashMap = new HashMap<>();
+    private final HashMap<String, LinkedList<AnimalImpl>> animalHashMap = new HashMap<>();
 
+    //哈希表的拉链法
     public void add(AnimalImpl animal) {
         LinkedList<AnimalImpl> animal_link = animalHashMap.get(animal.getName());
         if (animal_link == null) {

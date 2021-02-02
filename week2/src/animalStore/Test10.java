@@ -12,9 +12,12 @@ public class Test10 {
         Cat cat1 = new Cat("狗蛋", 5);
         Dog dog = new Dog("大黄", 12);
         Dog dog1 = new Dog("小黄", 14);
+        Dog dog_cat = new Dog("猫狗结合体", 1);
         Store store = new Store();
         store.add(cat);
         store.add(cat1);
+        store.add(dog_cat);
+        store.delete(dog_cat);
         store.add(dog);
         store.add(dog1);
         LinkedList<AnimalImpl> animal_temp = store.search("大黄");
