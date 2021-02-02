@@ -1,9 +1,9 @@
 package animalStore;
 
 public interface AnimalImpl {
-    public String getName();
+    String getName();
 
-    public int getAge();
+    int getAge();
 
-    public String toString();
+    String toString();
 }
