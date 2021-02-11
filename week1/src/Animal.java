@@ -19,6 +19,7 @@ public class Animal {
     public void sleep() {
         sleep_flag = true;
         get_state();
+        System.out.println();
     }
 
     public void wake() {

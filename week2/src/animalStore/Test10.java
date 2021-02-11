@@ -9,7 +9,7 @@ public class Test10 {
 
     public static void main(String[] args) {
         Cat cat = new Cat("狗蛋", 10);
-        Cat cat1 = new Cat("狗蛋", 5);
+        Cat cat1 = new Cat("狗蛋", 10);
         Dog dog = new Dog("大黄", 12);
         Dog dog1 = new Dog("小黄", 14);
         Dog dog_cat = new Dog("猫狗结合体", 1);
@@ -29,6 +29,7 @@ public class Test10 {
         LinkedList<AnimalImpl> animalLinkedList = store.search(dog);
         System.out.println(animalLinkedList);
         print___();
+        System.out.println(cat.equals(cat1));
     }
 
 }
