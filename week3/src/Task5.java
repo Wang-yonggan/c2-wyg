@@ -64,7 +64,7 @@ public class Task5 {
 
 
     public static void main(String[] args) {
-        int[] nums = {1, 3, 4};
+        int[] nums = {100, 300, 400};
         Scanner sc = new Scanner(System.in);
         try {
             System.out.println(getNum1(nums, sc.nextInt()));
