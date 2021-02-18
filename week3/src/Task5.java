@@ -23,7 +23,7 @@ class TempException1 extends Exception {
 }
 
 class TempException2 extends RuntimeException {
-    //不必须处理的异常
+    //不必须处理的异常,抛出会结束进程,自动打印函数栈
     public TempException2() {
     }
 
@@ -47,7 +47,6 @@ public class Task5 {
             try {
                 throw new TempException1("下标错误11--->退出try");
             } catch (TempException1 tempException1) {
-                tempException1.printStackTrace();
                 System.out.println("函数失败,返回-1");
                 return -1;
             }
