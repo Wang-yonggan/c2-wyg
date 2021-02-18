@@ -45,13 +45,13 @@ public class Task5 {
     public static int getNum11(int[] nums, int index) {
         if (index >= nums.length || index < 0)
             try {
-                throw new TempException1("下标错误1--->退出try");
+                throw new TempException1("下标错误11--->退出try");
             } catch (TempException1 tempException1) {
                 tempException1.printStackTrace();
-                System.out.println("函数getNum11失败,返回-1");
+                System.out.println("函数失败,返回-1");
                 return -1;
             }
-        System.out.println("getNul1结束");
+        System.out.println("getNul11结束");
         return nums[index];
     }
 
