@@ -17,12 +17,9 @@ public class Task7 {
             char[] chars = str.toCharArray();
             Arrays.sort(chars);
             String str_sored = new String(chars);
-            List list = hashMap.get(str_sored);
-            if (list == null) {
-                List list1 = new ArrayList<String>();
-                list1.add(str);
-                hashMap.put(str_sored, list1);
-            } else list.add(str);
+            List list = hashMap.getOrDefault(str_sored, new ArrayList<>());
+            list.add(str);
+            hashMap.put(str_sored, list);
         }
         ArrayList<ArrayList<String>> result = new ArrayList<>();
         for (String str_sored : hashMap.keySet()) {
