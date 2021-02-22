@@ -22,9 +22,7 @@ public class Task7 {
             hashMap.put(str_sored, list);
         }
         ArrayList<ArrayList<String>> result = new ArrayList<>();
-        for (String str_sored : hashMap.keySet()) {
-            result.add((ArrayList<String>) hashMap.get(str_sored));
-        }
+        hashMap.forEach((k, v) -> result.add((ArrayList<String>) v));
         return result;
     }
 
