@@ -8,13 +8,20 @@ import java.util.Scanner;
 
 public class Task3 {
     public static boolean isInt(double f) {
-        if (f == (float) (int) f) return true;
+        if (f == (int) f) return true;
+        String str = String.valueOf(f);
+        str = str.replace("e", "E");
+        if (str.contains("E")) {
+            String[] split_e = str.split("E");
+            if (Integer.valueOf(split_e[1]) >= split_e[0].length() - 2)
+                return true;
+        }
         return false;
     }
 
-    public static int[] getFenShu(double f) {
+    public static long[] getFenShu(double f) {
         double fen_mu = f;
-        float fen_zi = 1;
+        double fen_zi = 1;
         while (!isInt(fen_mu)) {
             fen_mu *= 10;
             fen_zi *= 10;
@@ -27,14 +34,15 @@ public class Task3 {
             fen_mu /= 2;
             fen_zi /= 2;
         }
-        int[] result = {(int) fen_mu, (int) fen_zi};
+        long[] result = {(long) fen_mu, (long) fen_zi};
         return result;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        // System.out.println(isInt(1.234567891234E15));
         double f = sc.nextDouble();
-        int[] result = getFenShu(f);
+        long[] result = getFenShu(f);
         System.out.println(result[0] + "/" + result[1]);
     }
 }
