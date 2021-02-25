@@ -22,10 +22,9 @@ public class Task3 {
     public static long[] getFenShu(double f) {
         double fen_mu = f;
         double fen_zi = 1;
-        while (!isInt(fen_mu)) {
-            fen_mu *= 10;
-            fen_zi *= 10;
-        }
+        int len = String.valueOf(fen_mu).split("\\.")[1].length();
+        fen_zi *= Math.pow(10, len);
+        fen_mu *= Math.pow(10, len);
         while (isInt(fen_mu / 5) && isInt(fen_zi / 5)) {
             fen_mu /= 5;
             fen_zi /= 5;
