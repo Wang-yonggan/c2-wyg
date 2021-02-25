@@ -13,16 +13,14 @@ import java.util.List;
 public class Task9 {
     public static void main(String[] args) {
         try (FileWriter fw = new FileWriter("C:\\csatest\\demo2.txt");) {
-
             List<String> all_line = Files.readAllLines(Paths.get("C:\\csatest\\demo.txt"));
             for (String line : all_line)
                 fw.write(line);
+            System.out.println("写入成功");
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println();
-        System.out.println("写入成功");
 
 
     }
