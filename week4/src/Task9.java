@@ -1,3 +1,4 @@
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -12,10 +13,12 @@ import java.util.List;
 
 public class Task9 {
     public static void main(String[] args) {
-        try (FileWriter fw = new FileWriter("C:\\csatest\\demo2.txt");) {
+        try (BufferedWriter bf = new BufferedWriter(new FileWriter("C:\\csatest\\demo2.txt"))) {
             List<String> all_line = Files.readAllLines(Paths.get("C:\\csatest\\demo.txt"));
-            for (String line : all_line)
-                fw.write(line);
+            for (String line : all_line) {
+                System.out.println(line);
+                bf.write(line);
+            }
             System.out.println("写入成功");
 
         } catch (IOException e) {
