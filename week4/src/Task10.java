@@ -2,13 +2,6 @@ public class Task10 implements Runnable {
     private int print = 10;
     private boolean a_b;//flase a print
 
-    public static void main(String[] args) {
-        Runnable runnable = new Task10();
-        new Thread(runnable, "A").start();
-        new Thread(runnable, "B").start();
-
-    }
-
     @Override
     public void run() {
         for (int i = 0; i < 13 && print >= 0; i++) {
@@ -26,6 +19,13 @@ public class Task10 implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+    }
+
+    public static void main(String[] args) {
+        Runnable runnable = new Task10();
+        new Thread(runnable, "A").start();
+        new Thread(runnable, "B").start();
+
     }
 }
 
