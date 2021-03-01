@@ -1,6 +1,5 @@
 public class Task10 implements Runnable {
     private int print = 10;
-    private boolean a_b;//flase a print
 
     @Override
     public void run() {
