@@ -1,52 +1,39 @@
-/**
- * @ClassName : Task10
- * @Author : wang-yonggan
- * @Date: 2021-02-25 20:00
- */
 public class Task10 implements Runnable {
     private int print = 10;
+    private boolean a_b;//flase a print
 
     public static void main(String[] args) {
         Runnable runnable = new Task10();
         new Thread(runnable, "A").start();
-        try {
-            Thread.sleep(1);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         new Thread(runnable, "B").start();
 
     }
 
     @Override
     public void run() {
-        for (int i = 0; i < 11; i++) {
-            try {
-                Thread.sleep(1);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            ABPrint();
+        for (int i = 0; i < 13 && print >= 0; i++) {
+            APrint();
         }
     }
 
-    public synchronized void ABPrint() {
-        if (print >= 0) {
+    public synchronized void APrint() {
+        System.out.printf("线程%s打印:%d\n", Thread.currentThread().getName(), 10 - print);
+        print--;
+        notifyAll();
+        if (print >= 0)
             try {
-                Thread.sleep(1);
+                wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.printf("线程%s打印:%d\n", Thread.currentThread().getName(), 10 - print);
-            print--;
-        }
     }
 }
+
+
 /**
  * @ClassName : Task10
  * @Author : wang-yonggan
  * @Date: 2021-02-25 15:56
- * <p>
  * 100ms可忽略函数运行时间
  * time     A       B       此时print   print--        打印
  * 1000ms:  打印     sleep       2      1              8
@@ -57,28 +44,46 @@ public class Task10 implements Runnable {
  * /
  * 1200ms:  打印     sleep       0     -1(退出while)   10
  * <p>
- * 100ms可忽略函数运行时间
- * time     A       B       此时print   print--        打印
- * 1000ms:  打印     sleep       2      1              8
- * /
- * /
- * 1100ms:  sleep   打印         1     0(退出while)    9
- * /
- * /
- * 1200ms:  打印     sleep       0     -1(退出while)   10
- * <p>
- * 100ms可忽略函数运行时间
- * time     A       B       此时print   print--        打印
- * 1000ms:  打印     sleep       2      1              8
- * /
- * /
- * 1100ms:  sleep   打印         1     0(退出while)    9
- * /
- * /
- * 1200ms:  打印     sleep       0     -1(退出while)   10
- */
-
-/**
+ * //public class Task10 implements Runnable {
+ * //    private int print = 10;
+ * //
+ * //    public static void main(String[] args) {
+ * //        Runnable runnable = new Task10();
+ * //        new Thread(runnable, "A").start();
+ * //        try {
+ * //            Thread.sleep(1);
+ * //        } catch (InterruptedException e) {
+ * //            e.printStackTrace();
+ * //        }
+ * //        new Thread(runnable, "B").start();
+ * //
+ * //    }
+ * //
+ * //    @Override
+ * //    public void run() {
+ * //        for (int i = 0; i < 11; i++) {
+ * //            try {
+ * //                Thread.sleep(1);
+ * //            } catch (InterruptedException e) {
+ * //                e.printStackTrace();
+ * //            }
+ * //            ABPrint();
+ * //        }
+ * //    }
+ * //
+ * //    public synchronized void ABPrint() {
+ * //        if (print >= 0) {
+ * //            try {
+ * //                Thread.sleep(1);
+ * //            } catch (InterruptedException e) {
+ * //                e.printStackTrace();
+ * //            }
+ * //            System.out.printf("线程%s打印:%d\n", Thread.currentThread().getName(), 10 - print);
+ * //            print--;
+ * //        }
+ * //    }
+ * //}
+ * /**
  * 100ms可忽略函数运行时间
  * time     A       B       此时print   print--        打印
  * 1000ms:  打印     sleep       2      1              8
