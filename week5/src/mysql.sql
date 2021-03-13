@@ -110,7 +110,7 @@ select * from student a where exists ( select * from student b where b.name='张
 select sno,score from choose where score<(select a.score from choose a,student b where a.sno=b.sno and b.name='张三'  and courseid='C1') and courseid='C1';
 
 #33
-select sno from choose where courseid='C1' union all select sno from choose where courseid='C3';
+select sno from choose where courseid='C1' union select sno from choose where courseid='C3';
 
 #34
-select sno from choose where courseid='C1' union select sno from choose where courseid='C3';
+select distinct sno from choose where courseid='c1' union select distinct sno from choose where courseid='c3';
