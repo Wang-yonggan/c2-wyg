@@ -7,13 +7,43 @@ import java.util.Arrays;
  */
 
 public class SortMethods {
+    public static void heap_down(int nums[], int i, int len) {
+        int min_index = i;
+        while (i * 2 + 1 < len) {
+            int t1 = 2 * i + 1;
+            int t2 = t1 + 1;
+            if (t1 < len && nums[t1] < nums[i])
+                min_index = t1;
+            if (t2 < len && nums[t2] < nums[t1] && nums[t2] < nums[i])
+                min_index = t2;
+            if (min_index != i) {
+                int temp = nums[min_index];
+                nums[min_index] = nums[i];
+                nums[i] = temp;
+                i = min_index;
+            } else break;
+        }
+    }
 
     public static void heap_sort(int nums[]) {
         /**
-         * @堆排序关键：
+         * @堆排序关键：all_down-->one_out-->one_down
          */
-
-
+        int n = nums.length;
+        for (int i = (n - 1) / 2; i >= 0; i--)
+            heap_down(nums, i, n);
+        int new_nums[] = new int[n];
+        int len = n;
+        int i = 0;
+        while (len > 0) {
+            new_nums[i++] = nums[0];
+            nums[0] = nums[len - 1];
+            len--;
+            heap_down(nums, 0, len);
+        }
+        for (i = 0; i < n; i++) {
+            nums[i] = new_nums[i];
+        }
     }
 
     public static void mao_pao(int nums[]) {
@@ -115,21 +145,16 @@ public class SortMethods {
             nums[i] = nums2[i - l - 1];
     }
 
-    public static void dui_sort(int nums[]) {
-
-
-    }
 
     public static void main(String[] args) {
-
         int nums[] = {1, 4, 2, 6, 0};
-        //int nums[] = {1, 2, 3};
         for (int num : nums) System.out.printf("%d--", num);
         System.out.println();
         //mao_pao(nums);
         //insert_sort(nums);
         //he_bing(nums);
-        fast_sort(nums);
+        //fast_sort(nums);
+        heap_sort(nums);
         for (int num : nums) System.out.printf("%d--", num);
         System.out.println("\n如有报错或排序错误，请告知!");
     }
