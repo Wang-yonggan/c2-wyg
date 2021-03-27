@@ -52,7 +52,7 @@ public class AccountService {
     } // 4通过id查找对象
 
     public Account selectByPrimaryKey(String id) {
-        return selectByPrimaryKey(id);
+        return accountDao.selectByPrimaryKey(id);
     }
 
     // 5更新Account
@@ -61,16 +61,28 @@ public class AccountService {
         updatetimenow(record.getId());
     }
 
+
     // 6转账功能 输入转出人id，转入人id，转账金额 实现转账
     public void transfer(String remitterId, String remitteeId, int money) {
-        int money_remitter = selectByPrimaryKey(remitteeId).getMoney();
+        if (reduce_money(remitterId, money) == 1)
+            add_money(remitteeId, money);
+    }
+
+    // 存钱
+    public void add_money(String id, int money) {
+        accountDao.addById(id, money);
+        updatetimenow(id);
+    }
+
+    // 取钱
+    public int reduce_money(String id, int money) {
+        int money_remitter = selectByPrimaryKey(id).getMoney();
         if (money_remitter < money) {
-            System.out.println("余额不足，转账失败");
-            return;
+            System.out.println("余额不足，操作失败");
+            return 0;
         }
-        accountDao.reduceById(remitterId, money);
-        updatetimenow(remitterId);
-        accountDao.addById(remitteeId, money);
-        updatetimenow(remitteeId);
+        accountDao.reduceById(id, money);
+        updatetimenow(id);
+        return 1;
     }
 }

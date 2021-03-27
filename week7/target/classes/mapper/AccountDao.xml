@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!--
-<label id param> tosql<-jinjia/>  distinguish by Dao to mysql
+<label id param> tosql<-jinjia/>  distinguish for Dao
 param #{}
 -->
 <!DOCTYPE mapper
@@ -25,17 +25,17 @@ param #{}
     </select>
 
     <update id="updateByPrimaryKey" parameterType="com.wyg.entity.Account">
-        update accounts set id = #{id},name=#{name},money=#{money},createtime=#{createtime},updatetime=#{updatetime}
+        update accounts set id=#{id},name=#{name},money=#{money},createtime=#{createtime},updatetime=#{updatetime}
         where id=#{id}
     </update>
     <update id="addById">
-        update accounts set money=money+#{1} where id=#{0}
+        update accounts set money=money+#{arg1} where id=#{arg0}
     </update>
     <update id="reduceById">
-        update accounts set money=money-#{1} where id=#{0}
+        update accounts set money=money-#{arg1} where id=#{arg0}
     </update>
-    <update id="updateById">
-        update accounts set updatetime=#{1} where id=#{0}
+    <update id="updatetimeById">
+        update accounts set updatetime = #{arg1} where id = #{arg0}
     </update>
 
 </mapper>

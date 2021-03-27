@@ -2,7 +2,7 @@ package com.wyg.mapper;
 
 import com.wyg.entity.Account;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 /**
@@ -26,11 +26,11 @@ public interface AccountDao {
     int updateByPrimaryKey(Account record);
 
     // 价钱
-    void addById(String id, int money);
+    int addById(String id, int money);
 
     //扣钱
-    void reduceById(String id, int money);
+    int reduceById(String id, int money);
 
     //更新时间
-    void updatetimeById(String id, Date date);
+    int updatetimeById(String id, Date date);
 }
