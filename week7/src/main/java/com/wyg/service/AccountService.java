@@ -5,6 +5,7 @@ import com.wyg.mapper.AccountDao;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.Test;
 
 import javax.annotation.Resources;
 import java.io.InputStream;
@@ -37,6 +38,7 @@ public class AccountService {
     }
 
     // 1查询所有记录
+    @Test
     public List<Account> findAll() {
         return accountDao.findAll();
     }

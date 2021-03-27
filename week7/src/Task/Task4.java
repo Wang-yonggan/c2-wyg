@@ -7,7 +7,7 @@
 public class Task4 {
     public static int[] solution(int[] nums, int k) {
         /**
-         * @滑动窗口关键 确定i+k<=len
+         *
          */
         int len = nums.length;
         int result[] = new int[len - k + 1];
