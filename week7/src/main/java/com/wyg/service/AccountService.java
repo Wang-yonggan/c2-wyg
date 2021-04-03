@@ -19,6 +19,11 @@ public class AccountService {
 
     private AccountDao accountDao;
 
+    public static void main(String[] args) {
+        AccountService accountService = new AccountService();
+        List<Account> accounts = accountService.findAll();
+        System.out.println(accounts);
+    }
 
     public AccountService() {
         InputStream in = Resources.class.getResourceAsStream("/mybatis-config.xml");

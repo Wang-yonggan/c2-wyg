@@ -1,6 +1,8 @@
 /**
- * @ClassName : Task11
- * @Author : wang-yonggan
+ * t
+ * * @ClassName : Task11
+ * * @Auhor : wang-yonggan
+ *
  * @Date: 2021-02-25 20:21
  */
 class Massage {
@@ -51,6 +53,7 @@ class Producer implements Runnable {
             if (i % 2 == 0) {
                 msg.set("java", "intellij");
             } else msg.set("python", "pycharm");
+            System.out.println("生产" + i);
         }
     }
 }

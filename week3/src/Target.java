@@ -53,6 +53,20 @@ public class Target {
         return result;
     }
 
+    public static int[] towSum1(int[] nums, int target) {
+        ArrayList list = new ArrayList();
+        list.add(nums[0]);
+        int result[] = new int[2];
+        for (int i = 1; i < nums.length; i++) {
+            if (list.contains(target - nums[i])) {
+                result[0] = list.indexOf(target - nums[i]);
+                result[1] = i;
+            }
+            list.add(nums[i]);
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         List<List> result = threeSum(new int[]{1, 2, 3, 4, 3, 5, 6, 7, 8, 8, 100}, 17);
         System.out.println(result);

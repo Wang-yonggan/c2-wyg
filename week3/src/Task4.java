@@ -15,6 +15,12 @@ public class Task4 {
     }
 
     public static void main(String[] args) {
-        System.out.println(wordCount("abc wanggyonggan and you"));
+        HashMap<Character, Integer> hashMap = wordCount("abc wanggyonggan and you");
+        hashMap.forEach((k, v) -> System.out.println(k + ":" + v));
+        ArrayList<Integer> list = new ArrayList<>();
+        //llections.addAll(list,hashMap.values().toArray());
+        //   list.forEach(x-> System.out.println(x));
+        System.out.println();
+
     }
 }

@@ -24,7 +24,7 @@ public class Student {
     }
 
     public static void main(String[] args) {
-        JBDCutils jbdCutils = new JBDCutils();
+        JBDCutils_ jbdCutils = new JBDCutils_();
         Connection conn = jbdCutils.get_connection();
 
     }
