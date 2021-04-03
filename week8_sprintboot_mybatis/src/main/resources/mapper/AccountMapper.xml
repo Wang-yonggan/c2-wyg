@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+<label id param> tosql<-jinjia/>  distinguish for Dao
+param #{}
+to->config.xml-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wyg.mapper.AccountMapper"> <!--java.wyg包、命名空间-->
+
+    <insert id="insert" parameterType="wyg.entity.Account">
+        insert into accounts
+        values (#{id}, #{name}, #{money}, #{createtime}, #{updatetime})
+    </insert>
+
+    <select id="findAll" resultType="wyg.entity.Account">
+        select *
+        from accounts
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="String">
+        delete
+        from accounts
+        where id = #{id}
+    </delete>
+
+    <select id="selectByPrimaryKey" parameterType="String" resultType="wyg.entity.Account">
+        select *
+        from accounts
+        where id = #{id}
+    </select>
+
+    <update id="updateByPrimaryKey" parameterType="wyg.entity.Account">
+        update accounts
+        set id=#{id},
+            name=#{name},
+            money=#{money},
+            createtime=#{createtime},
+            updatetime=#{updatetime}
+        where id = #{id}
+    </update>
+    <update id="addById">
+        update accounts
+        set money=money + #{arg1}
+        where id = #{arg0}
+    </update>
+    <update id="reduceById">
+        update accounts
+        set money=money - #{arg1}
+        where id = #{arg0}
+    </update>
+    <update id="updatetimeById">
+        update accounts
+        set updatetime = #{arg1}
+        where id = #{arg0}
+    </update>
+
+</mapper>
