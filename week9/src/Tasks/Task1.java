@@ -1,5 +1,3 @@
-package Tasks;
-
 import java.util.*;
 
 public class Task1 implements Comparator<Map.Entry<Integer, Integer>> {

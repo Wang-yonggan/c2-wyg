@@ -1,5 +1,3 @@
-package Tasks;
-
 //模拟圆圈
 public class Task2 {
 
