@@ -13,6 +13,13 @@ public class Task2 {
             }
             cur = cur.next;
         }
+        while (head1!=null){
+            cur.next = head1;
+            head1 = head1.next;
+        }while (head2!=null){
+            cur.next = head2;
+            head2 = head2.next;
+        }
         return result.next;
     }
 
@@ -33,7 +40,6 @@ public class Task2 {
         head2.print();
         ListNode result = merge_ListNode(head1, head2);
         result.print();
-
     }
 
 }
