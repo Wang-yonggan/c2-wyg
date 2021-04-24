@@ -1,7 +1,6 @@
 
 
 public class Task1 {
-    //设两个标志节点
     public static ListNode reverseList(ListNode head) {
         ListNode temp = null, cur = null;
         while (head != null) {
