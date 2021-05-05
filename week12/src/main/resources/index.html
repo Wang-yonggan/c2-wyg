@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>测试页面</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 1.引入 elemntui样式 我这里引用的是远程的，需要联网-->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+</head>
+
+<body>
+<!-- 用id=app 指明vue作用域-->
+<div id="app">
+
+  <div>
+    <div id="id2">作业详情</div>
+
+
+    <div id="id1">
+      <el-divider></el-divider>
+      <el-checkbox label="1.点击删除按钮，弹出警告框(询问是否确定),如果选择确定则消息提示删除成功"></el-checkbox>
+      <el-button type="danger" @click="del">删除</el-button>
+    </div>
+
+
+    <el-divider></el-divider>
+    <el-checkbox label="2.在输入框中，写一个数字，计算它的位数和,输入:123 输出:6 因为1+2+3=6"></el-checkbox>
+    <br>
+    <el-form :inline="true" class="demo-form-inline">
+      <el-form-item>
+        <el-input v-model="tempNumber" placeholder="请输入数字,例如123"></el-input>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="cal">计算</el-button>
+      </el-form-item>
+    </el-form>
+
+
+    <el-divider></el-divider>
+    <el-checkbox label="3.点击按钮会出现一张图片,再点一次会消失"></el-checkbox>
+    <el-button type="danger" @click="img">
+      <div v-if='!imgFlag'>显示图片</div>
+      <div v-if='imgFlag'>取消显示</div>
+    </el-button>
+    <!--        <el-image src="" v-if='imgFlag'></el-image>-->
+    <br>
+    <img :src="imgUrl" v-show="imgFlag" :alt="imgTitle+'!'">
+
+    <el-divider></el-divider>
+    <el-checkbox label="4.输入账号密码,点击登录,如果账号密码正确,跳转页面到百度。如果不匹配,提示密码错误,只有一个账号(name=admin,psw=admin)"></el-checkbox>
+    <el-form label-width="100px" class="demo-ruleForm">
+      <el-form-item label="账号" prop="name">
+        <el-input style="width:300px" v-model='user.name'></el-input>
+      </el-form-item>
+      <el-form-item label="密码" prop="name">
+        <el-input style="width:300px" v-model='user.psw'></el-input>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="login">登录</el-button>
+      </el-form-item>
+    </el-form>
+
+
+    <el-divider></el-divider>
+    <el-checkbox label="5.上传图片,只需体验这个组件即可,逻辑不用考虑"></el-checkbox>
+    <!-- 上传接口位置 调用成功后接受到地址-->
+    <el-upload class="upload-demo" action="https://jsonplaceholder.typicode.com/posts/" multiple :limit="3"
+               :on-exceed="handleExceed">
+      <el-button size="small" type="primary">点击上传</el-button>
+      <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+    </el-upload>
+
+
+    <el-divider></el-divider>
+    <el-checkbox label="6.分页查询:每次点击生效时,就消息提示当前页码"></el-checkbox>
+    <el-pagination background layout="prev, pager, next" :total="1000" @current-change="handleCurrentChange"
+                   :current-page.sync="currentPage">
+    </el-pagination>
+
+
+    <el-divider></el-divider>
+    <el-checkbox label="7.axios体验:点击查询用户 请求地址:http://jsonplaceholder.typicode.com/users GET请求"></el-checkbox>
+    <el-button type="primary" @click="getData">ajax获取</el-button>
+    <el-table :data="tableData" style="width: 100%">
+      <el-table-column prop="username" label="用户名" width="180">
+      </el-table-column>
+      <el-table-column prop="email" label="邮箱" width="180">
+      </el-table-column>
+    </el-table>
+  </div>
+
+</div>
+<!-- 2.引入 vue.js -->
+<script src="js/vue.js"></script>
+<!-- 3.引入 axios 异步请求工具 -->
+<script src="js/axios.js"></script>
+<!-- 4.引入 elemntui相关的js,处理响应特效的 我这里引用的是远程的，需要联网 -->
+<script src="https://unpkg.com/element-ui@2.15.1/lib/index.js"></script>
+
+<script src="js/main.js"></script>
+</body>
+</html>
